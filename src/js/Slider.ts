@@ -463,6 +463,8 @@ class Slider extends SliderUXComponent
             if (prc && !isNaN(prc))
             {
                 value += (i > 0 ? ';' : '') + MathHelper.prcToValue(prc, pointer).toString();
+            }else{
+                value += this.settings.from;
             }
         });
 
@@ -481,6 +483,8 @@ class Slider extends SliderUXComponent
             if (prc && !isNaN(prc))
             {
                 value += (i > 0 ? ';' : '') + prc.toString();
+            }else{
+                value += this.settings.from;
             }
         });
 
